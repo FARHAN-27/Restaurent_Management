@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagementsystem.Menu_Controller">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1310.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="250.0" spacing="20.0" style="-fx-background-color: #993333;" styleClass="primary-bg2" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="160.0" fitWidth="155.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="226.0" scaleShape="false" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/app.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="dashboard" mnemonicParsing="false" onAction="#go_back_to_dashboard" prefHeight="30.0" prefWidth="160.0" styleClass="primary-bg2" stylesheets="@style.css" text="Dashboard">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="30.0" layoutY="392.0" prefHeight="45.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/onsite_order.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="onsite_orders" mnemonicParsing="false" onMouseClicked="#go_to_take_orders" prefHeight="30.0" prefWidth="160.0" styleClass="primary-bg2" stylesheets="@style.css" text="Take Orders">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="30.0" layoutY="425.0" prefHeight="45.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/online_order.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="online_orders" mnemonicParsing="false" onMouseClicked="#go_to_Orders_Overview" prefHeight="30.0" prefWidth="160.0" styleClass="primary-bg2" stylesheets="@style.css" text="Orders Overview">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="30.0" layoutY="524.0" prefHeight="45.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/account.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="account" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#go_to_account_page" prefHeight="30.0" prefWidth="160.0" styleClass="primary-bg2" stylesheets="@style.css" text="Order Status">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="30.0" layoutY="491.0" prefHeight="45.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="chosen-item-card" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/menu.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="menu1" layoutX="51.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" styleClass="chosen-item-card" stylesheets="@style.css" text="Menu">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="30.0" layoutY="458.0" prefHeight="45.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/sales.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="sales" mnemonicParsing="false" onMouseClicked="#go_to_sales_insight" prefHeight="30.0" prefWidth="160.0" styleClass="primary-bg2" stylesheets="@style.css" text="Sales Insight">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #cccccc;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onMouseClicked="#go_to_logout" prefHeight="30.0" prefWidth="160.0" styleClass="primary-bg2" stylesheets="@style.css" text="Exit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #000000;" styleClass="primary-bg1" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="toppane" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1065.0" spacing="20.0" style="-fx-background-color: #993333;" styleClass="primary-bg2" stylesheets="@style.css">
+                     <children>
+                        <Pane prefHeight="74.0" prefWidth="768.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" layoutX="1.0" layoutY="6.0" prefHeight="62.0" prefWidth="701.0" text="Smart Restaurant Management System" textAlignment="CENTER" textFill="#290451">
+                                 <font>
+                                    <Font name="Stencil" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <HBox alignment="TOP_RIGHT" prefHeight="74.0" prefWidth="384.0" spacing="30.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox fx:id="search" alignment="TOP_CENTER" prefHeight="53.0" prefWidth="303.0" spacing="10.0" styleClass="search-container" stylesheets="@style.css">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="30.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/search.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="search1" onAction="#search1" prefHeight="30.0" prefWidth="202.0" promptText="search here" stylesheets="@style.css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox spacing="20.0">
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="1037.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="28.0" prefWidth="54.0" text="Menu" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox prefHeight="610.0" prefWidth="1020.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="602.0" prefWidth="1020.0">
+                                 <children>
+                                    <VBox prefHeight="602.0" prefWidth="677.0">
+                                       <children>
+                                          <ScrollPane fx:id="scrollpane" opacity="0.64" prefHeight="616.0" prefWidth="676.0" styleClass="primary-bg1" stylesheets="@style.css">
+                                             <content>
+                                                <VBox fx:id="vbox" prefHeight="609.0" prefWidth="683.0" style="-fx-background-color: #ccffff;" styleClass="add-btn" stylesheets="@style.css">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="675.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="43.0" prefWidth="50.0" style="-fx-font-weight: bold;" text="Serial">
+                                                               <font>
+                                                                  <Font name="Segoe UI Bold" size="16.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin></Label>
+                                                            <Label alignment="CENTER" prefHeight="43.0" prefWidth="128.0" style="-fx-font-weight: bold;" text="Food">
+                                                               <font>
+                                                                  <Font name="Segoe UI Bold" size="16.0" />
+                                                               </font></Label>
+                                                            <Label alignment="CENTER" prefHeight="43.0" prefWidth="225.0" style="-fx-font-weight: bold;" text="Description" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="Segoe UI Bold" size="16.0" />
+                                                               </font></Label>
+                                                            <Label alignment="CENTER" prefHeight="43.0" prefWidth="120.0" style="-fx-font-weight: bold;" text="Image">
+                                                               <font>
+                                                                  <Font name="Segoe UI Bold" size="16.0" />
+                                                               </font></Label>
+                                                            <Label alignment="CENTER" prefHeight="43.0" prefWidth="90.0" style="-fx-font-weight: bold;" text="Price">
+                                                               <font>
+                                                                  <Font name="Segoe UI Bold" size="16.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="602.0" prefWidth="346.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="398.0" prefWidth="345.0">
+                                             <children>
+                                                <HBox prefHeight="273.0" prefWidth="345.0" spacing="20.0">
+                                                   <children>
+                                                      <VBox prefHeight="233.0" prefWidth="109.0" spacing="20.0">
+                                                         <children>
+                                                            <Label prefHeight="24.0" prefWidth="104.0" style="-fx-font-weight: bold;" text="Name of Dish" textFill="#f8f1f1" wrapText="true" />
+                                                            <Label prefHeight="24.0" prefWidth="99.0" style="-fx-font-weight: bold;" text="Price" textFill="#f8f5f5" wrapText="true" />
+                                                            <Label style="-fx-font-weight: bold;" text="Description" textFill="#fcf2f2" />
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="64.0" prefWidth="101.0" style="-fx-font-weight: bold;" text="Image Source" textFill="#f5f3f3" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="20.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox prefHeight="110.0" prefWidth="185.0" spacing="20.0">
+                                                         <children>
+                                                            <TextField fx:id="new_dish_name" prefHeight="24.0" prefWidth="99.0" />
+                                                            <TextField fx:id="new_dish_price" prefHeight="24.0" prefWidth="108.0" />
+                                                            <TextArea fx:id="new_dish_description" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                                                            <TextField fx:id="new_dish_image_src" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <Button mnemonicParsing="false" onMouseClicked="#add_dish" style="-fx-background-color: #ffffcc;" text="Add Dish" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="95.0" prefWidth="345.0" spacing="20.0">
+                                                   <children>
+                                                      <VBox prefHeight="110.0" prefWidth="106.0" spacing="20.0">
+                                                         <children>
+                                                            <Label prefHeight="24.0" prefWidth="107.0" style="-fx-font-weight: bold;" text="Name of Dish" textFill="#fffefe" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="20.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox prefHeight="110.0" prefWidth="189.0" spacing="20.0">
+                                                         <children>
+                                                            <TextField fx:id="dish_to_be_removed" prefHeight="24.0" prefWidth="99.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <Button mnemonicParsing="false" onMouseClicked="#remove_dish" style="-fx-background-color: #ffffcc;" text="Remove Dish" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="627.0">
+                                             <children>
+                                                <HBox prefHeight="150.0" prefWidth="309.0" spacing="20.0">
+                                                   <children>
+                                                      <VBox prefHeight="110.0" prefWidth="105.0" spacing="20.0">
+                                                         <children>
+                                                            <Label prefHeight="24.0" prefWidth="141.0" style="-fx-font-weight: bold;" text="Name of Dish" textFill="#f5f2f2" />
+                                                            <Label prefHeight="24.0" prefWidth="99.0" style="-fx-font-weight: bold;" text="Price" textFill="#fcfafa" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="20.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox prefHeight="110.0" prefWidth="190.0" spacing="20.0">
+                                                         <children>
+                                                            <TextField fx:id="to_be_updated_name" prefHeight="24.0" prefWidth="99.0" />
+                                                            <TextField fx:id="to_be_updated_price" prefHeight="24.0" prefWidth="108.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <Button mnemonicParsing="false" onMouseClicked="#update_dish" style="-fx-background-color: #ffffcc;" text="Update Dish" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
